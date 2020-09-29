@@ -28,7 +28,8 @@
   ],
   "dependencies": {
     "atorch-service": "0.0.2",
-    "debug": "4.1.x"
+    "debug": "4.1.x",
+    "node-web-bluetooth": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
