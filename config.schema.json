@@ -1,0 +1,55 @@
+{
+  "pluginAlias": "Tasmota",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Please ensure that your Tasmota device has HASS Auto Discovey enabled ( setOption19 1 )",
+  "footerDisplay": "For further details please see the [README](https://github.com/NorthernMan54/homebridge-tasmota/blob/master/README.md). To manage your Tasmota devices [click here](http://tasui.shantur.com/#/findDevices)",
+  "schema": {
+    "type": "object",
+    "properties": {
+
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Tasmota",
+        "description": "Plugin name as displayed in the Homebridge log"
+      },
+      "mqttHost": {
+        "title": "Mqtt Host Address",
+        "type": "string",
+        "required": true,
+        "default": "mqtt.local",
+        "description": "This is the name / ip address for your MQTT Server."
+      },
+      "mqttUsername": {
+        "title": "Username",
+        "type": "string",
+        "required": false,
+        "default": "",
+        "description": "This is the Username for your MQTT Broker."
+      },
+      "mqttPassword": {
+        "title": "Password",
+        "type": "string",
+        "required": false,
+        "default": "",
+        "description": "This is the Password for your MQTT Broker."
+      },
+      "cleanup": {
+        "title": "Disconnected Device Cleanup Timing",
+        "type": "number",
+        "required": false,
+        "default": 24,
+        "description": "Cleanup of devices no longer connected too or responding on the network.  Time is in hours, defaults to 1 Day."
+      },
+      "debug": {
+        "title": "Debug Logging",
+        "type": "boolean",
+        "required": false,
+        "default": false,
+        "description": "Enable verbose DEBUG logging."
+      }
+    }
+  }
+}
