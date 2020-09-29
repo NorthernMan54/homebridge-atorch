@@ -1,9 +1,18 @@
-let device = require('../node_modules/atorch-service').AtorchService;
+let AtorchService = require('../node_modules/atorch-service').AtorchService;
 
-console.log(device);
-
-device.connect();
-
+var device = AtorchService.requestDevice()
+.then(device => {device.connect();
 device.on('packet', function(packet) {
   console.log('Packet', packet);
-})
+}); });
+
+// console.log(device);
+
+// device.connect();
+//
+
+/*
+.on('packet', function(packet) {
+  console.log('Packet', packet);
+});
+*/
